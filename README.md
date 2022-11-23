@@ -9,18 +9,19 @@
 </a>
 </p>
 
-🔥 Get power of [Wooks Composables](https://github.com/wooksjs/composables) in your h3 project!
+🔥 Get power of [@wooksjs/event-http](https://www.npmjs.com/package/@wooksjs/event-http) in your h3 project!
 
 ## Install
 
-`npm install @wooksjs/h3-adapter @wooksjs/composables`
+`npm install @wooksjs/h3-adapter @wooksjs/event-http`
 
 ## Usage
 
 ```ts
-import { useRouteParams, WooksError, useRequest} from '@wooksjs/composables'
-import { useBody } from '@wooksjs/body'
-import { useProxy } from '@wooksjs/proxy'
+import { WooksError, useRequest} from '@wooksjs/event-http'
+import { useRouteParams} from '@wooksjs/event-core'
+import { useBody } from '@wooksjs/http-body'
+import { useProxy } from '@wooksjs/http-proxy'
 import { createServer } from 'http'
 import { createApp, toNodeListener, createRouter  } from 'h3'
 import { eventHandler } from '@wooksjs/h3-adapter'
@@ -28,8 +29,8 @@ import { eventHandler } from '@wooksjs/h3-adapter'
 const router = createRouter()
 
 router.get('/test/:param', eventHandler(() => {
-    const { getRouteParam } = useRouteParams()
-    return { message: 'it works', param: getRouteParam('param'), url: useRequest().url }
+    const { get } = useRouteParams()
+    return { message: 'it works', param: get('param'), url: useRequest().url }
 }))
 
 router.post('/post', eventHandler(async () => {
