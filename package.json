@@ -1,6 +1,6 @@
 {
   "name": "@wooksjs/h3-adapter",
-  "version": "0.0.1-alpha.0",
+  "version": "0.1.0",
   "description": "H3 Adapter for Wooks Composables",
   "main": "dist/index.cjs",
   "module": "dist/index.mjs",
