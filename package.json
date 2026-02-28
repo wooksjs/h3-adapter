@@ -1,6 +1,6 @@
 {
     "name": "@wooksjs/h3-adapter",
-    "version": "1.0.0",
+    "version": "0.7.0",
     "description": "H3 Adapter for Wooks — use Wooks composables with H3",
     "keywords": [
         "adapter",
@@ -50,6 +50,7 @@
     },
     "devDependencies": {
         "@types/node": "^22.0.0",
+        "@wooksjs/event-core": "^0.7.4",
         "@wooksjs/event-http": "^0.7.4",
         "h3": "^2.0.1-rc.14",
         "oxfmt": "^0.35.0",
@@ -60,6 +61,7 @@
         "wooks": "^0.7.4"
     },
     "peerDependencies": {
+        "@wooksjs/event-core": ">=0.7.0",
         "@wooksjs/event-http": ">=0.7.0",
         "h3": ">=2.0.0",
         "wooks": ">=0.7.0"
